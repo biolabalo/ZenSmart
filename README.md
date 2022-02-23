@@ -1,6 +1,6 @@
 # ZenSmart React Test
 - Todo list
-- Dynamic buttons
+- Large buttons
 
 ## Instalation instractions
 ```
@@ -11,15 +11,13 @@
 ```
 
 ## Buttons component guideline 
-**Component Use** : `<Button />` or `<Button></Button>` <br>
+**Component Use** : `<LargeButton />` or `<LargeButton></LargeButton>` <br>
 **Props list** : 
 | Props         | Posible values                                        |
 | ------------: | :---------------------------------------------------- |
 | text          | To display button text                                |
-| size          | `small` `medium` `large`                              |
-| type          | `button` `submit`                                     |
-| variant       | `default` `success` `danger` `warning` `info` `primay`|
-| status        | `neutral` `pressed` `inactive`                        |
-| onClick       | Handles on click event                                |
+| bgcolor       | `#0a69f4` `#0242eb` `#d9e9fb`                            |
+
 
 ## Screenshots
+![Button list](./demo.png)
