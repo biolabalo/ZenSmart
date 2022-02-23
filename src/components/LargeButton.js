@@ -1,9 +1,13 @@
 
-const  LargeButton = ({ text, bgColor }) =>  {
+const  LargeButton = ({ text, bgColor, clickHandler }) =>  {
     return (
-      <button className="btn"
+      <button 
+      className="btn"
        style={{
         backgroundColor: bgColor ? bgColor : '#0d6efd',
+       }}
+       onClick={()=>{
+         if(clickHandler) return clickHandler()
        }}
       >
         {text || "Close Shipment"}

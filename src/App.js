@@ -1,5 +1,6 @@
-import TodoList from "./components/Todolist";
-import LargeButton from "./components/LargeButton"
+import TodoList from "./components/TodoList";
+import LargeButton from "./components/LargeButton";
+import ToDoListMVP from "./components/TodoMvp";
  
 const App = () => {
 
@@ -23,9 +24,12 @@ const App = () => {
     <LargeButton text="Close Shipment" bgColor="#0a69f4"/>
     <LargeButton text="Close Shipment" bgColor="#0242eb"/>
     <LargeButton text="Close Shipment" bgColor="#d9e9fb"/>
+
+
+    <div>
+    <ToDoListMVP/>
+    </div>
     </>
-
-
   );
 }
 
