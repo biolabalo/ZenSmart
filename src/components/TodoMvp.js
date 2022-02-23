@@ -17,7 +17,7 @@ const AddTaskForm = ({ addTask }) => {
       <input
         type="text"
         value={value}
-        placeholder="Enter a title for this task…"
+        placeholder="Enter a title for this todo…"
         onChange={e => setValue(e.target.value)}
       />
       <LargeButton text="ADD TODO" bgColor="#0a69f4"/>
