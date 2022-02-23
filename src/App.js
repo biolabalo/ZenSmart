@@ -1,24 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+
+const  TodoList = ({ items, onItemClick }) =>  {
+    return (
+      <ul>
+        {items.map((item, index) => (
+          <li      
+           onClick={event => !item.done ? onItemClick(item, event) : event.stopPropagation() }
+           key={index}>{item.text}</li>
+        ))}
+      </ul>
+    );
+  }
+
+ 
+const App = () => {
+
+  const items = [
+    { text: "Visit grandma", done: true },
+    { text: "Play BasketBall", done: false },
+    { text: "Buy diappers", done: false }
+  ];
+
+  const onItemClick = (item, event) => {  
+    console.log(item, event)
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TodoList
+      items={items}
+      onItemClick={onItemClick}
+    />
   );
 }
 
